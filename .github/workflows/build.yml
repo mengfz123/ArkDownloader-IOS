@@ -1,0 +1,127 @@
+﻿name: Build iOS
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build & Archive
+    runs-on: macos-15
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
+
+      - name: Show build settings
+        run: xcodebuild -project ArkDownloader.xcodeproj -scheme ArkDownloader -showBuildSettings | head -50
+
+      # ---------------------------------------------------------------
+      # 1) Simulator build — verifies compilation, no signing required
+      # ---------------------------------------------------------------
+      - name: Build for Simulator
+        run: |
+          xcodebuild build \
+            -project ArkDownloader.xcodeproj \
+            -scheme ArkDownloader \
+            -destination 'platform=iOS Simulator,name=iPhone 15' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            ONLY_ACTIVE_ARCH=YES \
+            | xcpretty
+
+      - name: Upload simulator .app
+        uses: actions/upload-artifact@v4
+        with:
+          name: ArkDownloader-Simulator
+          path: build/Debug-iphonesimulator/ArkDownloader.app
+          if-no-files-found: warn
+
+      # ---------------------------------------------------------------
+      # 2) Device archive — produces an unsigned .ipa
+      #    Re-sign with AltStore / Sideloadly / Xcode (free Apple ID)
+      # ---------------------------------------------------------------
+      - name: Archive for Device (unsigned)
+        run: |
+          xcodebuild archive \
+            -project ArkDownloader.xcodeproj \
+            -scheme ArkDownloader \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath build/ArkDownloader.xcarchive \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            | xcpretty
+
+      - name: Export unsigned .ipa
+        run: |
+          mkdir -p build/ipa/Payload
+          cp -R build/ArkDownloader.xcarchive/Products/Applications/ArkDownloader.app build/ipa/Payload/
+          cd build/ipa && zip -qr ArkDownloader-unsigned.ipa Payload
+
+      - name: Upload unsigned .ipa
+        uses: actions/upload-artifact@v4
+        with:
+          name: ArkDownloader-unsigned-ipa
+          path: build/ipa/ArkDownloader-unsigned.ipa
+
+      # ---------------------------------------------------------------
+      # 3) Signed archive (only when signing secrets are provided)
+      #    Set GitHub Secrets: BUILD_CERTIFICATE_BASE64, P12_PASSWORD,
+      #    BUILD_PROVISION_PROFILE_BASE64, KEYCHAIN_PASSWORD
+      # ---------------------------------------------------------------
+      - name: Signed archive
+        if: ${{ secrets.BUILD_CERTIFICATE_BASE64 != '' }}
+        env:
+          BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
+          P12_PASSWORD: ${{ secrets.P12_PASSWORD }}
+          BUILD_PROVISION_PROFILE_BASE64: ${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}
+          KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+        run: |
+          # create variables
+          CERTIFICATE_PATH=$RUNNER_TEMP/build_certificate.p12
+          PP_PATH=$RUNNER_TEMP/build_pp.mobileprovision
+          KEYCHAIN_PATH=$RUNNER_TEMP/app-signing.keychain-db
+
+          # import certificate and provisioning profile from secrets
+          echo -n "$BUILD_CERTIFICATE_BASE64" | base64 --decode -o $CERTIFICATE_PATH
+          echo -n "$BUILD_PROVISION_PROFILE_BASE64" | base64 --decode -o $PP_PATH
+
+          # create temporary keychain
+          security create-keychain -p "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
+          security set-keychain-settings -lut 21600 $KEYCHAIN_PATH
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
+
+          # import certificate to keychain
+          security import $CERTIFICATE_PATH -P "$P12_PASSWORD" -A -t cert -f pkcs12 -k $KEYCHAIN_PATH
+          security list-keychain -d user -s $KEYCHAIN_PATH
+
+          # apply provisioning profile
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles/
+
+      - name: Build & export signed .ipa
+        if: ${{ secrets.BUILD_CERTIFICATE_BASE64 != '' }}
+        run: |
+          xcodebuild -exportArchive \
+            -archivePath build/ArkDownloader.xcarchive \
+            -exportPath build/signed \
+            -exportOptionsPlist <(printf '<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n<plist version="1.0"><dict><key>method</key><string>development</string><key>signingStyle</key><string>manual</string></dict></plist>') \
+            CODE_SIGN_STYLE=Manual \
+            | xcpretty
+
+      - name: Upload signed .ipa
+        if: ${{ secrets.BUILD_CERTIFICATE_BASE64 != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ArkDownloader-signed-ipa
+          path: build/signed/*.ipa
