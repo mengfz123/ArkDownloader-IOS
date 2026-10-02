@@ -150,18 +150,18 @@ struct TaskCard: View {
                 HStack(spacing: 8) {
                     switch task.status {
                     case .downloading, .merging:
-                        PillButton("暂停", action: onPause)
+                        PillButton(title: "暂停", action: onPause)
                     case .paused, .pending:
-                        PillButton("继续", action: onResume, primary: true)
+                        PillButton(title: "继续", action: onResume, primary: true)
                     case .failed:
-                        PillButton("重试", action: onRestart, primary: true)
+                        PillButton(title: "重试", action: onRestart, primary: true)
                     case .completed:
-                        PillButton("打开", action: onOpen, primary: true)
+                        PillButton(title: "打开", action: onOpen, primary: true)
                     default:
                         EmptyView()
                     }
-                    PillButton("复制", action: onCopy, ghost: true)
-                    PillButton("删除", action: onDelete, danger: true)
+                    PillButton(title: "复制", action: onCopy, ghost: true)
+                    PillButton(title: "删除", action: onDelete, danger: true)
                 }
             }
         }

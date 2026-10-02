@@ -28,7 +28,7 @@ struct CreateTaskView: View {
                                     }
                                     do {
                                         let r = UrlResolve.resolve(first, nameHint: nil, sizeHint: 0)
-                                        let name = UrlResolve.canonicalFileName(url: r.url, nameHint: fileName.isEmpty ? nil : fileName)
+                                        let name = UrlResolve.canonicalFileName(r.url, nameHint: fileName.isEmpty ? nil : fileName)
                                         resolveMsg = "\(r.kind == .baidu ? "百度" : "HTTP") · \(name)" + (r.size > 0 ? " · \(FormatUtil.formatBytes(r.size))" : "")
                                         resolveOk = true
                                         if fileName.isEmpty && MainViewModel.parseUrlPaste(urls).count == 1 {
