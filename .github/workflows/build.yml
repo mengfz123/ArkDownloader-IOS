@@ -45,6 +45,7 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             ONLY_ACTIVE_ARCH=NO \
+            ENABLE_PREVIEWS=NO \
             | xcpretty
 
       - name: Upload simulator .app
@@ -73,6 +74,7 @@ jobs:
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
             AD_HOC_CODE_SIGNING_ALLOWED=YES \
+            ENABLE_PREVIEWS=NO \
             | xcpretty
 
       - name: Locate .app & package unsigned .ipa
@@ -145,6 +147,7 @@ jobs:
         with:
           name: ArkDownloader-signed-ipa
           path: build/signed/*.ipa
+
 
 
 
