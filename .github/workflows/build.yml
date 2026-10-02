@@ -36,17 +36,25 @@ jobs:
       - name: Create iOS Simulator
         run: |
           set -euo pipefail
-          RUNTIME_ID=$(xcrun simctl list runtimes available -j | python3 -c "import json,sys;d=json.load(sys.stdin);print(next(r['identifier'] for r in d['runtimes'] if r.get('isAvailable') and 'iOS' in r.get('name','')))")
-          DEVICE_ID=$(xcrun simctl list devicetypes available -j | python3 -c "import json,sys;d=json.load(sys.stdin);print(next(t['identifier'] for t in d['devicetypes'] if 'iPhone' in t.get('name','')))")
+          RUNTIME_ID=$(xcrun simctl list runtimes -j | python3 -c "import json,sys;d=json.load(sys.stdin);print(next((r['identifier'] for r in d.get('runtimes',[]) if r.get('isAvailable') and 'iOS' in r.get('name','')), ''))")
+          DEVICE_ID=$(xcrun simctl list devicetypes -j | python3 -c "import json,sys;d=json.load(sys.stdin);print(next((t['identifier'] for t in d.get('devicetypes',[]) if 'iPhone' in t.get('name','')), ''))")
+          if [ -z "$RUNTIME_ID" ] || [ -z "$DEVICE_ID" ]; then
+            echo "ERROR: Could not find available iOS runtime or iPhone device type"
+            echo "Available runtimes:"
+            xcrun simctl list runtimes
+            echo "Available device types:"
+            xcrun simctl list devicetypes
+            exit 1
+          fi
           echo "Runtime: $RUNTIME_ID"
           echo "Device:  $DEVICE_ID"
           if ! SIM_UDID=$(xcrun simctl create "ArkDownloader-Sim" "$DEVICE_ID" "$RUNTIME_ID" 2>/dev/null); then
             echo "simctl create failed, looking for existing simulator..."
-            SIM_UDID=$(xcrun simctl list devices available -j | python3 -c "import json,sys;d=json.load(sys.stdin);print(next(dev['udid'] for devs in d['devices'].values() for dev in devs if dev.get('isAvailable') and 'iPhone' in dev.get('name','')))")
+            SIM_UDID=$(xcrun simctl list devices -j | python3 -c "import json,sys;d=json.load(sys.stdin);print(next((dev['udid'] for devs in d.get('devices',{}).values() for dev in devs if dev.get('isAvailable') and 'iPhone' in dev.get('name','')), ''))")
           fi
           if [ -z "$SIM_UDID" ]; then
             echo "ERROR: could not obtain a simulator UDID"
-            xcrun simctl list devices available
+            xcrun simctl list devices
             exit 1
           fi
           echo "SIM_UDID=$SIM_UDID" >> $GITHUB_ENV
