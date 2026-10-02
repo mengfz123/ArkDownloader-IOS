@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 
 /// Baidu PCS/CDN direct-link helpers, ported from the Android version.
 /// Filename note: Baidu fin= is usually UTF-8 percent-encoded.

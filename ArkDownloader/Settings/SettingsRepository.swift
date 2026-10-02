@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 import Combine
 
 /// Persists app settings to UserDefaults with a Combine publisher.

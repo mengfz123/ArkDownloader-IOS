@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 import Network
 
 /// Lightweight HTTP RPC server using Network framework. Mirrors the Android RpcServer API.

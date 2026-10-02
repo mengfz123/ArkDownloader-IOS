@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 
 /// Multi-range HTTP downloader built on URLSession.
 /// Writes ranges directly into a pre-allocated file handle at absolute offsets.

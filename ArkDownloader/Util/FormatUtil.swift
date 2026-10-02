@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 
 enum FormatUtil {
     static func formatBytes(_ bytes: Int64) -> String {

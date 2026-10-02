@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 import SQLite3
 
 /// SQLite-backed task persistence. All access is serialized through this actor.

@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 
 struct TaskEntity: Equatable {
     let id: String

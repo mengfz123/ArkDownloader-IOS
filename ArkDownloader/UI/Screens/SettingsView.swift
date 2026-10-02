@@ -1,4 +1,4 @@
-﻿import SwiftUI
+import SwiftUI
 
 struct SettingsView: View {
     @ObservedObject var vm: MainViewModel

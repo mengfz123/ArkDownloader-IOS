@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 
 struct AppSettings: Codable, Equatable {
     var defaultSaveDir: String = ""

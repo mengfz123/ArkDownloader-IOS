@@ -1,4 +1,4 @@
-﻿import SwiftUI
+import SwiftUI
 import WebKit
 
 /// Embeds the CloudDrive parse page (https://clouds.arkdream.top/c?embed=1).

@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 
 enum TaskStatus: String, Codable, CaseIterable {
     case pending

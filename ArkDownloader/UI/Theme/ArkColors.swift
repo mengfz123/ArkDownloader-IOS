@@ -1,4 +1,4 @@
-﻿import SwiftUI
+import SwiftUI
 
 /// Uni-app ArkDownloader palette (dark theme).
 enum ArkColors {

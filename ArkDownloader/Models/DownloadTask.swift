@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 
 struct DownloadTask: Identifiable, Equatable {
     let id: String

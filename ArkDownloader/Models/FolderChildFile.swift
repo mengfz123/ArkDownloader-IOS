@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 
 /// One file inside a folder download task.
 struct FolderChildFile: Codable, Equatable {

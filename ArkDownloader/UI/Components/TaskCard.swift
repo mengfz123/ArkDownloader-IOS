@@ -1,4 +1,4 @@
-﻿import SwiftUI
+import SwiftUI
 
 struct TaskCard: View {
     let task: DownloadTask

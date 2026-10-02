@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 
 /// Multi-connection download engine. Mirrors the Android DownloadEngine.
 /// All DB access goes through AppDatabase actor; scheduling is serialized via this actor.

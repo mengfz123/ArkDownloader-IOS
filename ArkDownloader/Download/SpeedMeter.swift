@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 
 /// Thread-safe rolling speed meter.
 final class SpeedMeter {

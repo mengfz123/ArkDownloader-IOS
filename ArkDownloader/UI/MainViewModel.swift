@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 import Combine
 
 /// UI-facing view model. Mirrors the Android MainViewModel.

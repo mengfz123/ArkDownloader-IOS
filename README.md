@@ -1,4 +1,4 @@
-﻿# ArkDownloader iOS
+# ArkDownloader iOS
 
 面向 iOS 的**原生**多线程分片下载器（Swift + SwiftUI），与 [ArkDownloader Android](https://github.com/mengfz123/ArkDownloader) 功能集对齐：百度网盘直链友好、断点续传、后台保活，并提供 Gopeed 风格本地 RPC。
 

@@ -1,4 +1,4 @@
-﻿import SwiftUI
+import SwiftUI
 
 struct CreateTaskView: View {
     @ObservedObject var vm: MainViewModel

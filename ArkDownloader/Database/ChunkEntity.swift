@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 
 struct ChunkEntity: Equatable {
     let taskId: String
