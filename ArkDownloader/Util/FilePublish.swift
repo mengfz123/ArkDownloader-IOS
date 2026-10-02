@@ -38,7 +38,8 @@ enum FilePublish {
         // Best-effort: present preview via a transient window.
         let scene = UIApplication.shared.connectedScenes.first { $0.activationState == .foregroundActive }
             as? UIWindowScene
-        let root = scene?.windows.first { $0.isKeyWindow }?.rootViewController
+        _ = scene?.windows.first { $0.isKeyWindow }?.rootViewController
         return vc.presentPreview(animated: true)
     }
 }
+

@@ -27,7 +27,7 @@ struct CreateTaskView: View {
                                         resolveMsg = "请先填写链接"; resolveOk = false; return
                                     }
                                     do {
-                                        let r = UrlResolve.resolve(url: first, nameHint: nil, sizeHint: 0)
+                                        let r = UrlResolve.resolve(first, nameHint: nil, sizeHint: 0)
                                         let name = UrlResolve.canonicalFileName(url: r.url, nameHint: fileName.isEmpty ? nil : fileName)
                                         resolveMsg = "\(r.kind == .baidu ? "百度" : "HTTP") · \(name)" + (r.size > 0 ? " · \(FormatUtil.formatBytes(r.size))" : "")
                                         resolveOk = true
@@ -187,3 +187,4 @@ struct ArkField: View {
         }
     }
 }
+

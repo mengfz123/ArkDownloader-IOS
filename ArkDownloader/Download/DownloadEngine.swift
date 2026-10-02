@@ -33,7 +33,7 @@ actor DownloadEngine {
         headers: [String: String]?
     ) async throws -> TaskEntity {
         let settings = settingsRepo.current()
-        let resolved = UrlResolve.resolve(url: url, nameHint: fileName, sizeHint: totalSize ?? 0)
+        let resolved = UrlResolve.resolve(url, nameHint: fileName, sizeHint: totalSize ?? 0)
         let kind = resolved.kind
         let id = UUID().uuidString
         let dir = FilePublish.resolveWritableDir(saveDir?.isEmpty == false ? saveDir : (settings.defaultSaveDir.isEmpty ? nil : settings.defaultSaveDir))
@@ -913,6 +913,7 @@ private final class TaskRuntime: @unchecked Sendable {
         all.forEach { $0.cancel() }
     }
 }
+
 
 
 

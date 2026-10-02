@@ -78,7 +78,7 @@ final class DownloadRepository: DownloadRepositoryBridge {
         guard !url.isEmpty else { throw NSError(domain: "Ark", code: 400, userInfo: [NSLocalizedDescriptionKey: "url required"]) }
         let nameHint = (body["name"] as? String)?.nilIfEmpty
         let sizeHint = (body["size"] as? Int64) ?? (body["total_size"] as? Int64) ?? 0
-        let resolved = UrlResolve.resolve(url: url, nameHint: nil, sizeHint: sizeHint)
+        let resolved = UrlResolve.resolve(url, nameHint: nil, sizeHint: sizeHint)
         var size = resolved.size
         var name = UrlResolve.canonicalFileName(url: resolved.url, nameHint: nameHint)
         if size <= 0 && resolved.kind == .http {
@@ -467,3 +467,4 @@ final class DownloadRepository: DownloadRepositoryBridge {
 private extension String {
     var nilIfEmpty: String? { isEmpty ? nil : self }
 }
+
