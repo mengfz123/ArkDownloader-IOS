@@ -3,8 +3,8 @@
 /// One file inside a folder download task.
 struct FolderChildFile: Codable, Equatable {
     let url: String
-    let name: String
-    let relativePath: String
+    var name: String
+    var relativePath: String
     var size: Int64 = 0
     var headersJson: String = "{}"
     var userAgent: String? = nil

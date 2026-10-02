@@ -176,8 +176,8 @@ enum UrlResolve {
         } else if looksGarbled(candidate) {
             candidate = pickBestName(candidate,
                 repairMojibake(candidate, .utf8),
-                repairMojibake(candidate, .init(rawValue: "GB18030") ?? .utf8),
-                repairMojibake(candidate, .init(rawValue: "GBK") ?? .utf8))
+                repairMojibake(candidate, Self.encodingForCharset("GB18030")),
+                repairMojibake(candidate, Self.encodingForCharset("GBK")))
         }
         return candidate.trimmingCharacters(in: .whitespaces)
     }
@@ -200,13 +200,13 @@ enum UrlResolve {
         while n.contains("//") { n = n.replacingOccurrences(of: "//", with: "/") }
         n = n.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
         if n.isEmpty { return ("", "download.bin") }
-        if n.hasPrefix("/") || n.range(of: #"^[A-Za-z]:/"#, options: .regularExpression) != nil {
-            return ("", sanitizeFileName(String(n.split(separator: "/").last ?? n)))
+        if n.hasPrefix("/") || Self.regexRange(in: n, pattern: #"^[A-Za-z]:/"#) != nil {
+            return ("", sanitizeFileName(n.split(separator: "/").last.map(String.init) ?? n))
         }
         let parts = n.split(separator: "/").map { String($0).trimmingCharacters(in: .whitespaces) }
             .filter { !$0.isEmpty && $0 != "." }
         if parts.isEmpty || parts.contains("..") {
-            return ("", sanitizeFileName(String(n.split(separator: "/").last ?? n)))
+            return ("", sanitizeFileName(n.split(separator: "/").last.map(String.init) ?? n))
         }
         let file = sanitizeFileName(parts.last!)
         if parts.count == 1 { return ("", file) }
@@ -234,15 +234,15 @@ enum UrlResolve {
     static func parseContentDispositionName(_ header: String?) -> String? {
         guard let header = header, !header.isEmpty else { return nil }
         let hd = header.contains("%") && header.lowercased().contains("filename")
-            ? (runCatching { decodeEncodedName(header) }.get { header })
+            ? decodeEncodedName(header)
             : header
 
-        if let starAny = hd.range(of: #"filename\*\s*=\s*([^';\s]+)\s*'\s*[^']*'\s*([^;]+)"#, options: .regularExpression) {
+        if let starAny = Self.regexRange(in: hd, pattern: #"filename\*\s*=\s*([^';\s]+)\s*'\s*[^']*'\s*([^;]+)"#) {
             let match = String(hd[starAny])
             // simplified: extract charset and encoded value
-            if let charsetRange = match.range(of: #"=\s*([^';\s]+)'"#, options: .regularExpression) {
+            if let charsetRange = Self.regexRange(in: match, pattern: #"=\s*([^';\s]+)'"#) {
                 let csName = String(match[charsetRange]).trimmingCharacters(in: CharacterSet(charactersIn: "= '\""))
-                if let encRange = match.range(of: #"'[^']*'\s*([^;]+)$"#, options: .regularExpression) {
+                if let encRange = Self.regexRange(in: match, pattern: #"'[^']*'\s*([^;]+)$"#) {
                     let enc = String(match[encRange]).trimmingCharacters(in: CharacterSet(charactersIn: "' \""))
                     let bytes = percentDecodeToBytes(enc)
                     let encoding = String.Encoding(rawValue: CFStringConvertEncodingToNSStringEncoding(
@@ -257,12 +257,12 @@ enum UrlResolve {
             }
         }
 
-        if let starUtf = hd.range(of: #"filename\*\s*=\s*(?:UTF-8|utf-8)''([^;]+)"#, options: .regularExpression) {
+        if let starUtf = Self.regexRange(in: hd, pattern: #"filename\*\s*=\s*(?:UTF-8|utf-8)''([^;]+)"#) {
             let decoded = decodeEncodedName(String(hd[starUtf]).trimmingCharacters(in: CharacterSet(charactersIn: "\"'")))
             if !decoded.isEmpty { return sanitizeFileName(decoded) }
         }
 
-        if let plain = hd.range(of: #"filename\s*=\s*"([^"]*)"|filename\s*=\s*([^;\s]+)"#, options: .regularExpression) {
+        if let plain = Self.regexRange(in: hd, pattern: #"filename\s*=\s*"([^"]*)"|filename\s*=\s*([^;\s]+)"#) {
             let full = String(hd[plain])
             var raw = full
             // extract quoted or unquoted
@@ -352,7 +352,7 @@ enum UrlResolve {
         let utf8 = String(data: bytes, encoding: .utf8) ?? ""
         let gbk = decodeWith(bytes, encoding: "GBK")
         let gb18030 = decodeWith(bytes, encoding: "GB18030")
-        if isStrictUtf8(bytes) && !looksGarbled(utf8) { return utf8 }
+        if isStrictUtf8([UInt8](bytes)) && !looksGarbled(utf8) { return utf8 }
         if !looksGarbled(gb18030) && scoreName(gb18030) >= scoreName(utf8) { return gb18030 }
         if !looksGarbled(gbk) { return gbk }
         if !looksGarbled(utf8) { return utf8 }
@@ -363,6 +363,19 @@ enum UrlResolve {
         let cfEnc = CFStringConvertIANACharSetNameToEncoding(encoding as CFString)
         let nsEnc = CFStringConvertEncodingToNSStringEncoding(cfEnc)
         return String(data: data, encoding: String.Encoding(rawValue: nsEnc)) ?? ""
+    }
+
+    private static func encodingForCharset(_ charset: String) -> String.Encoding {
+        let cfEnc = CFStringConvertIANACharSetNameToEncoding(charset as CFString)
+        let nsEnc = CFStringConvertEncodingToNSStringEncoding(cfEnc)
+        return String.Encoding(rawValue: nsEnc)
+    }
+
+    private static func regexRange(in string: String, pattern: String) -> Range<String.Index>? {
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else { return nil }
+        let nsRange = NSRange(string.startIndex..., in: string)
+        guard let match = regex.firstMatch(in: string, range: nsRange) else { return nil }
+        return Range(match.range, in: string)
     }
 
     private static func percentDecodeToStringBest(_ encoded: String) -> String {
@@ -414,12 +427,10 @@ enum UrlResolve {
 
     private static func isStrictUtf8(_ bytes: [UInt8]) -> Bool {
         var decoder = UTF8()
-        var bytes = bytes
         var iterator = bytes.makeIterator()
-        var decoded = ""
         while true {
             switch decoder.decode(&iterator) {
-            case .scalarValue(let scalar): decoded.append(Character(scalar))
+            case .scalarValue: continue
             case .emptyInput: return true
             case .error: return false
             }

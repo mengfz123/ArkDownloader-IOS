@@ -49,7 +49,7 @@ actor DownloadEngine {
         var contentDisposition: String? = nil
         if kind == .http {
             let needSize = total <= 0
-            let provisional = UrlResolve.canonicalFileName(url: resolved.url, contentDisposition: nil, nameHint: fileName)
+            let provisional = UrlResolve.canonicalFileName(resolved.url, contentDisposition: nil, nameHint: fileName)
             let needNameProbe = UrlResolve.isQuarkOrCdnUrl(resolved.url) ||
                 provisional == "download.bin" || (fileName?.isEmpty ?? true)
             if needSize || needNameProbe {
@@ -60,7 +60,7 @@ actor DownloadEngine {
                 contentDisposition = probe.contentDisposition
             }
         }
-        let resolvedName = UrlResolve.canonicalFileName(url: resolved.url, contentDisposition: contentDisposition, nameHint: fileName)
+        let resolvedName = UrlResolve.canonicalFileName(resolved.url, contentDisposition: contentDisposition, nameHint: fileName)
         guard total > 0 else {
             throw NSError(domain: "ArkDownloader", code: 0, userInfo: [NSLocalizedDescriptionKey: "无法获取文件大小，请检查链接是否有效"])
         }
@@ -199,16 +199,18 @@ actor DownloadEngine {
 
         let job = Task { [weak self] in
             guard let self = self else { return }
-            defer {
-                self.jobs.removeValue(forKey: taskId)
-                self.runtimes.removeValue(forKey: taskId)
-                self.activeCount = self.activeJobCount()
-                self.pumpQueue()
-            }
             await self.runTask(taskId)
+            await self.finishJob(taskId)
         }
         jobs[taskId] = job
         activeCount = activeJobCount()
+    }
+
+    private func finishJob(_ taskId: String) {
+        jobs.removeValue(forKey: taskId)
+        runtimes.removeValue(forKey: taskId)
+        activeCount = activeJobCount()
+        pumpQueue()
     }
 
     func pauseTask(_ id: String) async {
@@ -360,12 +362,13 @@ actor DownloadEngine {
         guard var task = await db.getById(taskId) else { return }
         var children = FolderChildFile.decodeList(task.folderChildrenJson)
         guard !children.isEmpty else { await fail(taskId, "文件夹内没有可下载文件"); return }
-        let folderName = task.fileName.replacingOccurrences(of: "\\", with: "/")
+        let cleanedFolder = task.fileName.replacingOccurrences(of: "\\", with: "/")
             .trimmingCharacters(in: CharacterSet(charactersIn: "/"))
-            .split(separator: "/").first.map(String.init)?
-            .nilIfEmpty ?? children.first?.relativePath.replacingOccurrences(of: "\\", with: "/")
-            .trimmingCharacters(in: CharacterSet(charactersIn: "/")).split(separator: "/").first.map(String.init)
-            .flatMap { $0.isEmpty ? nil : $0 } ?? "folder"
+        let firstSegment = cleanedFolder.split(separator: "/").first.map(String.init)?.nilIfEmpty
+        let fallbackRel = children.first?.relativePath.replacingOccurrences(of: "\\", with: "/")
+            .trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+        let fallbackSegment = fallbackRel?.split(separator: "/").first.map(String.init).flatMap { $0.isEmpty ? nil : $0 }
+        let folderName = firstSegment ?? fallbackSegment ?? "folder"
         let folderDir = URL(fileURLWithPath: task.saveDir).appendingPathComponent(folderName)
         try? FileManager.default.createDirectory(at: folderDir, withIntermediateDirectories: true)
 
@@ -575,7 +578,7 @@ actor DownloadEngine {
     private enum ChildDownloadResult { case completed, paused, canceled, failed }
 
     private func downloadPreparedFile(_ taskId: String, fileTask: TaskEntity, rt: TaskRuntime) async -> ChildDownloadResult {
-        var task = fileTask
+        let task = fileTask
         let headers = FormatUtil.parseHeaders(task.headersJson)
         let kind: UrlResolve.Kind = UrlResolve.isBaiduUrl(task.url) ? .baidu : .http
         let ua = (task.userAgent?.isEmpty == false) ? task.userAgent : UrlResolve.pickUserAgent(kind, settingsRepo.current())
@@ -742,7 +745,7 @@ actor DownloadEngine {
         let incomplete = await db.getChunks(taskId).contains { !$0.completed }
         if incomplete { await fail(taskId, "仍有未完成分片"); return }
 
-        let bestName = UrlResolve.canonicalFileName(url: task.url, nameHint: (task.fileName as NSString).lastPathComponent)
+        let bestName = UrlResolve.canonicalFileName(task.url, nameHint: (task.fileName as NSString).lastPathComponent)
         var finalName = task.fileName
         var finalPath = out.path
         if !bestName.isEmpty && bestName != "download.bin" &&

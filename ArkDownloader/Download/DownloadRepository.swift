@@ -1,5 +1,6 @@
 ﻿import Foundation
 import Combine
+import UIKit
 
 /// Bridges the download engine, settings, and RPC server.
 /// Acts as the RPC bridge implementation.
@@ -80,7 +81,7 @@ final class DownloadRepository: DownloadRepositoryBridge {
         let sizeHint = (body["size"] as? Int64) ?? (body["total_size"] as? Int64) ?? 0
         let resolved = UrlResolve.resolve(url, nameHint: nil, sizeHint: sizeHint)
         var size = resolved.size
-        var name = UrlResolve.canonicalFileName(url: resolved.url, nameHint: nameHint)
+        var name = UrlResolve.canonicalFileName(resolved.url, nameHint: nameHint)
         if size <= 0 && resolved.kind == .http {
             let settings = settingsRepo.current()
             let ua = UrlResolve.pickUserAgent(resolved.kind, settings)
@@ -93,7 +94,7 @@ final class DownloadRepository: DownloadRepositoryBridge {
             sem.wait()
             if let p = probe {
                 size = p.totalSize
-                name = UrlResolve.canonicalFileName(url: resolved.url, contentDisposition: p.contentDisposition, nameHint: nameHint)
+                name = UrlResolve.canonicalFileName(resolved.url, contentDisposition: p.contentDisposition, nameHint: nameHint)
             }
         }
         return [
