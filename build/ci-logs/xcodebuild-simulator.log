@@ -1,0 +1,709 @@
+Command line invocation:
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/xcodebuild build -project ArkDownloader.xcodeproj -scheme ArkDownloader -sdk iphonesimulator -configuration Debug SYMROOT=build CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO ENABLE_PREVIEWS=NO
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+    CODE_SIGNING_REQUIRED = NO
+    ENABLE_PREVIEWS = NO
+    ONLY_ACTIVE_ARCH = NO
+    SDKROOT = iphonesimulator18.5
+    SYMROOT = build
+
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+{ platform:iOS Simulator, arch:arm64, id:B7718686-AA2A-4157-8E04-7FA4AE6F7BD0, OS:18.5, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:x86_64, id:B7718686-AA2A-4157-8E04-7FA4AE6F7BD0, OS:18.5, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:arm64, id:FF8C8404-A040-4C69-BE4F-258FA2571EA2, OS:18.6, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:x86_64, id:FF8C8404-A040-4C69-BE4F-258FA2571EA2, OS:18.6, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:arm64, id:5A7C2682-DC41-42B4-A065-6477314C6107, OS:26.0.1, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:x86_64, id:5A7C2682-DC41-42B4-A065-6477314C6107, OS:26.0.1, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:arm64, id:388BAFD3-DA76-4ACF-AB96-CB8111ABF99E, OS:26.1, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:x86_64, id:388BAFD3-DA76-4ACF-AB96-CB8111ABF99E, OS:26.1, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:arm64, id:AC7BF8FD-BAB0-4374-A4F7-52ABA082B92E, OS:26.2, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:x86_64, id:AC7BF8FD-BAB0-4374-A4F7-52ABA082B92E, OS:26.2, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:arm64, id:7222C0FB-7BCD-457A-AD32-76C948D2602F, OS:18.5, name:iPad (A16) }
+{ platform:iOS Simulator, arch:x86_64, id:7222C0FB-7BCD-457A-AD32-76C948D2602F, OS:18.5, name:iPad (A16) }
+{ platform:iOS Simulator, arch:arm64, id:458323E3-9E85-4764-B868-F02CE9C4ADF0, OS:18.6, name:iPad (A16) }
+{ platform:iOS Simulator, arch:x86_64, id:458323E3-9E85-4764-B868-F02CE9C4ADF0, OS:18.6, name:iPad (A16) }
+{ platform:iOS Simulator, arch:arm64, id:3869DFDE-0197-4B91-915D-90B3D279FE15, OS:26.0.1, name:iPad (A16) }
+{ platform:iOS Simulator, arch:x86_64, id:3869DFDE-0197-4B91-915D-90B3D279FE15, OS:26.0.1, name:iPad (A16) }
+{ platform:iOS Simulator, arch:arm64, id:BAD1706E-E13F-444D-B19F-C7A451E7774A, OS:26.1, name:iPad (A16) }
+{ platform:iOS Simulator, arch:x86_64, id:BAD1706E-E13F-444D-B19F-C7A451E7774A, OS:26.1, name:iPad (A16) }
+{ platform:iOS Simulator, arch:arm64, id:E1D34F4A-69A6-4E07-8C9F-D5E775E2A416, OS:26.2, name:iPad (A16) }
+{ platform:iOS Simulator, arch:x86_64, id:E1D34F4A-69A6-4E07-8C9F-D5E775E2A416, OS:26.2, name:iPad (A16) }
+{ platform:iOS Simulator, arch:arm64, id:FB985C96-A632-42FC-A064-57F80EA1A0AF, OS:18.5, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:x86_64, id:FB985C96-A632-42FC-A064-57F80EA1A0AF, OS:18.5, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:6CE4BAD1-E547-4D95-B130-FBCDCE49282B, OS:18.6, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:x86_64, id:6CE4BAD1-E547-4D95-B130-FBCDCE49282B, OS:18.6, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:5DCA7372-1294-4245-AADE-E9938CC9119F, OS:26.0.1, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:x86_64, id:5DCA7372-1294-4245-AADE-E9938CC9119F, OS:26.0.1, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:B5D41CE2-3444-4312-8351-5A2B58E90C26, OS:26.1, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:x86_64, id:B5D41CE2-3444-4312-8351-5A2B58E90C26, OS:26.1, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:28EB6DDD-01F7-42F7-B1FF-56CC398818EB, OS:26.2, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:x86_64, id:28EB6DDD-01F7-42F7-B1FF-56CC398818EB, OS:26.2, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:238ABD15-A231-49EB-9A8E-2A18835D05E4, OS:18.5, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:x86_64, id:238ABD15-A231-49EB-9A8E-2A18835D05E4, OS:18.5, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:A1F6F219-8660-4BC0-B7E9-17BEE98456F5, OS:18.6, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:x86_64, id:A1F6F219-8660-4BC0-B7E9-17BEE98456F5, OS:18.6, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:244E1618-3993-4A44-B213-FA496A601843, OS:26.0.1, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:x86_64, id:244E1618-3993-4A44-B213-FA496A601843, OS:26.0.1, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:5DE60B78-C540-4CAE-BF3B-D31601C7ABBB, OS:26.1, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:x86_64, id:5DE60B78-C540-4CAE-BF3B-D31601C7ABBB, OS:26.1, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:EF008AE9-B743-4A49-A8AD-A27FD9CCAE52, OS:26.2, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:x86_64, id:EF008AE9-B743-4A49-A8AD-A27FD9CCAE52, OS:26.2, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:DEC44A2A-1119-4A2D-89C9-0A7E48485C1E, OS:18.5, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:x86_64, id:DEC44A2A-1119-4A2D-89C9-0A7E48485C1E, OS:18.5, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:6AF871A0-5FC9-4DA0-92D3-D60A3F3986E0, OS:18.6, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:x86_64, id:6AF871A0-5FC9-4DA0-92D3-D60A3F3986E0, OS:18.6, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:DC7ED953-B711-4AC8-A414-A7008BA50DAD, OS:26.0.1, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:x86_64, id:DC7ED953-B711-4AC8-A414-A7008BA50DAD, OS:26.0.1, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:D3B307C6-3981-42AF-9708-E15A72BECF2D, OS:26.1, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:x86_64, id:D3B307C6-3981-42AF-9708-E15A72BECF2D, OS:26.1, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:6235A74F-E996-4A4A-B5B9-91A8A87F50EE, OS:26.2, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:x86_64, id:6235A74F-E996-4A4A-B5B9-91A8A87F50EE, OS:26.2, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:9747906A-4708-4563-B8B9-1FE571CEA8C5, OS:18.5, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:x86_64, id:9747906A-4708-4563-B8B9-1FE571CEA8C5, OS:18.5, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:24D6FA4F-CB44-41E0-B6E8-91374A95E4CA, OS:18.6, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:x86_64, id:24D6FA4F-CB44-41E0-B6E8-91374A95E4CA, OS:18.6, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:1262447B-91B2-4C0C-90E8-36537D183683, OS:26.0.1, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:x86_64, id:1262447B-91B2-4C0C-90E8-36537D183683, OS:26.0.1, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:40C16C1A-5BA0-41C6-99A5-355F9CBACD9F, OS:26.1, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:x86_64, id:40C16C1A-5BA0-41C6-99A5-355F9CBACD9F, OS:26.1, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:8C025F3C-2545-40A5-AC87-FF534DB84D42, OS:26.2, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:x86_64, id:8C025F3C-2545-40A5-AC87-FF534DB84D42, OS:26.2, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:2EDB2671-090C-4988-822E-421879ECE84C, OS:18.5, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:x86_64, id:2EDB2671-090C-4988-822E-421879ECE84C, OS:18.5, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:41C766F4-A950-4049-81B8-1B578B5804D8, OS:18.6, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:x86_64, id:41C766F4-A950-4049-81B8-1B578B5804D8, OS:18.6, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:CE25E477-AAC4-469F-9343-301D5ABCD9BC, OS:26.0.1, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:x86_64, id:CE25E477-AAC4-469F-9343-301D5ABCD9BC, OS:26.0.1, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:38A0995A-759F-417D-ACED-70D43D6DBB82, OS:26.1, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:x86_64, id:38A0995A-759F-417D-ACED-70D43D6DBB82, OS:26.1, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:FABE5896-BAF4-4220-8AFE-C1E31625D4DC, OS:26.2, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:x86_64, id:FABE5896-BAF4-4220-8AFE-C1E31625D4DC, OS:26.2, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:07E2DE8A-D138-4013-A250-9EDE31AAB9DE, OS:26.0.1, name:iPad Pro 11-inch (M5) }
+{ platform:iOS Simulator, arch:x86_64, id:07E2DE8A-D138-4013-A250-9EDE31AAB9DE, OS:26.0.1, name:iPad Pro 11-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:165A6108-1D5C-4AFB-94C8-64E25DA3E7B5, OS:26.1, name:iPad Pro 11-inch (M5) }
+{ platform:iOS Simulator, arch:x86_64, id:165A6108-1D5C-4AFB-94C8-64E25DA3E7B5, OS:26.1, name:iPad Pro 11-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:93F8D73D-86A4-455D-8E33-EFA55B5760E4, OS:26.2, name:iPad Pro 11-inch (M5) }
+{ platform:iOS Simulator, arch:x86_64, id:93F8D73D-86A4-455D-8E33-EFA55B5760E4, OS:26.2, name:iPad Pro 11-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:AFBB202F-0F39-4DD8-8C47-DAB97D7D9DF2, OS:18.5, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:x86_64, id:AFBB202F-0F39-4DD8-8C47-DAB97D7D9DF2, OS:18.5, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:DD335931-190E-4075-B666-91C698C0CDEC, OS:18.6, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:x86_64, id:DD335931-190E-4075-B666-91C698C0CDEC, OS:18.6, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:1A4FA0DD-F5CE-49FF-A6E2-1CAC22BE4C80, OS:26.0.1, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:x86_64, id:1A4FA0DD-F5CE-49FF-A6E2-1CAC22BE4C80, OS:26.0.1, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:380AF256-AA90-49F1-BC8E-618736C734CB, OS:26.1, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:x86_64, id:380AF256-AA90-49F1-BC8E-618736C734CB, OS:26.1, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:5A602664-A209-462C-9B02-6E51FACDFED6, OS:26.2, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:x86_64, id:5A602664-A209-462C-9B02-6E51FACDFED6, OS:26.2, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:7EBB23D5-64E2-4DDB-B24F-86C16A07ED26, OS:26.0.1, name:iPad Pro 13-inch (M5) }
+{ platform:iOS Simulator, arch:x86_64, id:7EBB23D5-64E2-4DDB-B24F-86C16A07ED26, OS:26.0.1, name:iPad Pro 13-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:B673CC61-F30B-479A-9672-FA680127EE1F, OS:26.1, name:iPad Pro 13-inch (M5) }
+{ platform:iOS Simulator, arch:x86_64, id:B673CC61-F30B-479A-9672-FA680127EE1F, OS:26.1, name:iPad Pro 13-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:0DE52589-6E0B-47D4-B4A7-7E4E3D9C1049, OS:26.2, name:iPad Pro 13-inch (M5) }
+{ platform:iOS Simulator, arch:x86_64, id:0DE52589-6E0B-47D4-B4A7-7E4E3D9C1049, OS:26.2, name:iPad Pro 13-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:773C1AA1-17A9-4EC1-8BE5-D4BB00DF3AC1, OS:18.5, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:x86_64, id:773C1AA1-17A9-4EC1-8BE5-D4BB00DF3AC1, OS:18.5, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:arm64, id:417FB14E-FFC0-4FB1-B6D6-BA85C2FFC3D5, OS:18.6, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:x86_64, id:417FB14E-FFC0-4FB1-B6D6-BA85C2FFC3D5, OS:18.6, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:arm64, id:B12E6DD0-E867-4D26-BFBA-2BD9C3D55DBD, OS:26.0.1, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:x86_64, id:B12E6DD0-E867-4D26-BFBA-2BD9C3D55DBD, OS:26.0.1, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:arm64, id:CFF66741-12D5-44BF-BABB-29622D014BE2, OS:26.1, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:x86_64, id:CFF66741-12D5-44BF-BABB-29622D014BE2, OS:26.1, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:arm64, id:9D9BF050-F6F5-4D32-84C0-4B7AC57F63EF, OS:26.2, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:x86_64, id:9D9BF050-F6F5-4D32-84C0-4B7AC57F63EF, OS:26.2, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:arm64, id:F0E646EF-4792-4F36-B48B-EC89B3A6B73B, OS:18.5, name:iPhone 16 }
+{ platform:iOS Simulator, arch:x86_64, id:F0E646EF-4792-4F36-B48B-EC89B3A6B73B, OS:18.5, name:iPhone 16 }
+{ platform:iOS Simulator, arch:arm64, id:02010C24-263D-445A-8934-74FE019F15CA, OS:18.6, name:iPhone 16 }
+{ platform:iOS Simulator, arch:x86_64, id:02010C24-263D-445A-8934-74FE019F15CA, OS:18.6, name:iPhone 16 }
+{ platform:iOS Simulator, arch:arm64, id:2D9C6CF6-FA7D-4D87-84C4-D5FA503F22B9, OS:26.0.1, name:iPhone 16 }
+{ platform:iOS Simulator, arch:x86_64, id:2D9C6CF6-FA7D-4D87-84C4-D5FA503F22B9, OS:26.0.1, name:iPhone 16 }
+{ platform:iOS Simulator, arch:arm64, id:6D9FD9BD-F027-4EE5-83A6-BC98ED2603B0, OS:26.1, name:iPhone 16 }
+{ platform:iOS Simulator, arch:x86_64, id:6D9FD9BD-F027-4EE5-83A6-BC98ED2603B0, OS:26.1, name:iPhone 16 }
+{ platform:iOS Simulator, arch:arm64, id:2911FD29-A09E-4A81-BEA7-99A616FB7FC8, OS:26.2, name:iPhone 16 }
+{ platform:iOS Simulator, arch:x86_64, id:2911FD29-A09E-4A81-BEA7-99A616FB7FC8, OS:26.2, name:iPhone 16 }
+{ platform:iOS Simulator, arch:arm64, id:183F93DA-9B72-40B1-AD0E-287526E4E9D5, OS:18.5, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:x86_64, id:183F93DA-9B72-40B1-AD0E-287526E4E9D5, OS:18.5, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:arm64, id:102FCD1A-4F6B-4B15-ABA9-774BC75ADB11, OS:18.6, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:x86_64, id:102FCD1A-4F6B-4B15-ABA9-774BC75ADB11, OS:18.6, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:arm64, id:2EE15100-41A2-4790-893A-050FC5FE5AA8, OS:26.0.1, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:x86_64, id:2EE15100-41A2-4790-893A-050FC5FE5AA8, OS:26.0.1, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:arm64, id:C1337AE6-D82D-4C09-B0BA-4437460B306E, OS:26.1, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:x86_64, id:C1337AE6-D82D-4C09-B0BA-4437460B306E, OS:26.1, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:arm64, id:CFF67BF1-533D-480D-9A76-F1EADAD339C7, OS:26.2, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:x86_64, id:CFF67BF1-533D-480D-9A76-F1EADAD339C7, OS:26.2, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:arm64, id:DC4CD8B3-4457-4153-9087-A0D7A2F9BFD9, OS:18.5, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:x86_64, id:DC4CD8B3-4457-4153-9087-A0D7A2F9BFD9, OS:18.5, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:arm64, id:7FF9581C-A82C-472C-B005-492B077D1038, OS:18.6, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:x86_64, id:7FF9581C-A82C-472C-B005-492B077D1038, OS:18.6, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:arm64, id:3C00406B-9DB5-4106-B5FD-132C84BF188A, OS:26.0.1, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:x86_64, id:3C00406B-9DB5-4106-B5FD-132C84BF188A, OS:26.0.1, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:arm64, id:3F7F71D8-9EE4-4B63-84A8-6EBD0C5017BE, OS:26.1, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:x86_64, id:3F7F71D8-9EE4-4B63-84A8-6EBD0C5017BE, OS:26.1, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:arm64, id:291E4B86-C951-41A7-8327-84BF0304D0A9, OS:26.2, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:x86_64, id:291E4B86-C951-41A7-8327-84BF0304D0A9, OS:26.2, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:arm64, id:F1218AE5-3D29-4CE5-9D0F-6F21CEAA502C, OS:18.5, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:x86_64, id:F1218AE5-3D29-4CE5-9D0F-6F21CEAA502C, OS:18.5, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:BAE7F30B-6707-4BF4-8375-FE75C94DD2FA, OS:18.6, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:x86_64, id:BAE7F30B-6707-4BF4-8375-FE75C94DD2FA, OS:18.6, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:E1605B84-CF5A-4193-878D-3623BD8B90AE, OS:26.0.1, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:x86_64, id:E1605B84-CF5A-4193-878D-3623BD8B90AE, OS:26.0.1, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:920BDAA4-BD69-4998-9337-3B06B2C584F4, OS:26.1, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:x86_64, id:920BDAA4-BD69-4998-9337-3B06B2C584F4, OS:26.1, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:9F3D563E-AF8A-4089-B32E-3ADADEB067F0, OS:26.2, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:x86_64, id:9F3D563E-AF8A-4089-B32E-3ADADEB067F0, OS:26.2, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:51F5467F-16A9-4296-9C05-A74F91234967, OS:18.5, name:iPhone 16e }
+{ platform:iOS Simulator, arch:x86_64, id:51F5467F-16A9-4296-9C05-A74F91234967, OS:18.5, name:iPhone 16e }
+{ platform:iOS Simulator, arch:arm64, id:8CBC396B-9510-42FF-AC70-614F5BD0FC86, OS:18.6, name:iPhone 16e }
+{ platform:iOS Simulator, arch:x86_64, id:8CBC396B-9510-42FF-AC70-614F5BD0FC86, OS:18.6, name:iPhone 16e }
+{ platform:iOS Simulator, arch:arm64, id:4118C2C1-7E78-41EB-B816-3C75C7076F1E, OS:26.0.1, name:iPhone 16e }
+{ platform:iOS Simulator, arch:x86_64, id:4118C2C1-7E78-41EB-B816-3C75C7076F1E, OS:26.0.1, name:iPhone 16e }
+{ platform:iOS Simulator, arch:arm64, id:A1D6E20D-5C3F-46E8-88C8-9A88DB2C1D0E, OS:26.1, name:iPhone 16e }
+{ platform:iOS Simulator, arch:x86_64, id:A1D6E20D-5C3F-46E8-88C8-9A88DB2C1D0E, OS:26.1, name:iPhone 16e }
+{ platform:iOS Simulator, arch:arm64, id:1ECD563C-BBBB-42E5-9A9F-648809113BF6, OS:26.2, name:iPhone 16e }
+{ platform:iOS Simulator, arch:x86_64, id:1ECD563C-BBBB-42E5-9A9F-648809113BF6, OS:26.2, name:iPhone 16e }
+{ platform:iOS Simulator, arch:arm64, id:003F24D4-BA1A-4D48-A26E-C14D511E7472, OS:26.0.1, name:iPhone 17 }
+{ platform:iOS Simulator, arch:x86_64, id:003F24D4-BA1A-4D48-A26E-C14D511E7472, OS:26.0.1, name:iPhone 17 }
+{ platform:iOS Simulator, arch:arm64, id:3D025AD9-C9BB-46A3-BCB4-B84F592C53A0, OS:26.1, name:iPhone 17 }
+{ platform:iOS Simulator, arch:x86_64, id:3D025AD9-C9BB-46A3-BCB4-B84F592C53A0, OS:26.1, name:iPhone 17 }
+{ platform:iOS Simulator, arch:arm64, id:22970779-4A47-463E-8B6D-CC012359B320, OS:26.2, name:iPhone 17 }
+{ platform:iOS Simulator, arch:x86_64, id:22970779-4A47-463E-8B6D-CC012359B320, OS:26.2, name:iPhone 17 }
+{ platform:iOS Simulator, arch:arm64, id:517BAAA1-7BAB-4B50-8B25-04EF0238019B, OS:26.0.1, name:iPhone 17 Pro }
+{ platform:iOS Simulator, arch:x86_64, id:517BAAA1-7BAB-4B50-8B25-04EF0238019B, OS:26.0.1, name:iPhone 17 Pro }
+{ platform:iOS Simulator, arch:arm64, id:DBAE96AF-90B5-4387-B859-66348EF015C7, OS:26.1, name:iPhone 17 Pro }
+{ platform:iOS Simulator, arch:x86_64, id:DBAE96AF-90B5-4387-B859-66348EF015C7, OS:26.1, name:iPhone 17 Pro }
+{ platform:iOS Simulator, arch:arm64, id:E952A9B0-CC78-435C-BF08-06AD47FE1076, OS:26.2, name:iPhone 17 Pro }
+{ platform:iOS Simulator, arch:x86_64, id:E952A9B0-CC78-435C-BF08-06AD47FE1076, OS:26.2, name:iPhone 17 Pro }
+{ platform:iOS Simulator, arch:arm64, id:CA359E70-5E9C-400C-A7E1-34013F7B088A, OS:26.0.1, name:iPhone 17 Pro Max }
+{ platform:iOS Simulator, arch:x86_64, id:CA359E70-5E9C-400C-A7E1-34013F7B088A, OS:26.0.1, name:iPhone 17 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:1BF1F2D9-05B4-4B31-BE19-1031B4A0EA80, OS:26.1, name:iPhone 17 Pro Max }
+{ platform:iOS Simulator, arch:x86_64, id:1BF1F2D9-05B4-4B31-BE19-1031B4A0EA80, OS:26.1, name:iPhone 17 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:4C675116-265D-488F-BFFA-836A4545674C, OS:26.2, name:iPhone 17 Pro Max }
+{ platform:iOS Simulator, arch:x86_64, id:4C675116-265D-488F-BFFA-836A4545674C, OS:26.2, name:iPhone 17 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:AB0FB058-2DF8-4824-A382-91FE8566B342, OS:26.0.1, name:iPhone Air }
+{ platform:iOS Simulator, arch:x86_64, id:AB0FB058-2DF8-4824-A382-91FE8566B342, OS:26.0.1, name:iPhone Air }
+{ platform:iOS Simulator, arch:arm64, id:55DF797C-6847-4575-ABFA-4E2A08520774, OS:26.1, name:iPhone Air }
+{ platform:iOS Simulator, arch:x86_64, id:55DF797C-6847-4575-ABFA-4E2A08520774, OS:26.1, name:iPhone Air }
+{ platform:iOS Simulator, arch:arm64, id:1CE1A334-F45C-4216-823B-EE5E6389838F, OS:26.2, name:iPhone Air }
+{ platform:iOS Simulator, arch:x86_64, id:1CE1A334-F45C-4216-823B-EE5E6389838F, OS:26.2, name:iPhone Air }
+{ platform:iOS Simulator, arch:arm64, id:22A3039C-6A45-47F4-82D4-80C58CA94379, OS:18.5, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, arch:x86_64, id:22A3039C-6A45-47F4-82D4-80C58CA94379, OS:18.5, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, arch:arm64, id:8938AAA2-76B5-4D49-A228-383499B04C02, OS:18.6, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, arch:x86_64, id:8938AAA2-76B5-4D49-A228-383499B04C02, OS:18.6, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, arch:arm64, id:F3967A6C-63E1-4323-9EA7-6C26D42F77A3, OS:26.0.1, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, arch:x86_64, id:F3967A6C-63E1-4323-9EA7-6C26D42F77A3, OS:26.0.1, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, arch:arm64, id:3EF44343-CDF7-4757-BAE2-47B813D8FF60, OS:26.1, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, arch:x86_64, id:3EF44343-CDF7-4757-BAE2-47B813D8FF60, OS:26.1, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, arch:arm64, id:48B2DA2E-AF18-4E36-BB25-B25969A4EBCF, OS:26.2, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, arch:x86_64, id:48B2DA2E-AF18-4E36-BB25-B25969A4EBCF, OS:26.2, name:iPhone SE (3rd generation) }
+{ platform:visionOS Simulator, arch:arm64, variant:Designed for [iPad,iPhone], id:EFC27B51-A1AC-4C44-A0CE-43F84B5F0B68, OS:2.3, name:Apple Vision Pro }
+{ platform:visionOS Simulator, arch:arm64, variant:Designed for [iPad,iPhone], id:136F9422-A9E1-4C19-88AF-45BB818E37BB, OS:2.4, name:Apple Vision Pro }
+{ platform:visionOS Simulator, arch:arm64, variant:Designed for [iPad,iPhone], id:0C5BF083-23A9-419B-9CBD-8E2AA7E26265, OS:2.5, name:Apple Vision Pro }
+{ platform:visionOS Simulator, arch:arm64, variant:Designed for [iPad,iPhone], id:EB17C5F7-7C10-47FF-9344-F550DB0D244F, OS:26.1, name:Apple Vision Pro }
+{ platform:visionOS Simulator, arch:arm64, variant:Designed for [iPad,iPhone], id:62E72748-B3EC-4F87-AAD9-DE47D54B7B63, OS:26.2, name:Apple Vision Pro }
+{ platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:8525336740215b5138fbf2d75fd158df10e8d967, name:My Mac }
+{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'ArkDownloader' in project 'ArkDownloader' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 95531d0dca9cc49053f55d33e9a51bc9
+Build description path: /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/XCBuildData/95531d0dca9cc49053f55d33e9a51bc9.xcbuilddata
+CreateBuildDirectory /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader.xcodeproj
+    builtin-create-build-directory /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build
+
+CreateBuildDirectory /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader.xcodeproj
+    builtin-create-build-directory /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex
+
+ClangStatCache /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader.xcodeproj
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -o /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader-dde5da9e6edff4e5e475d67eb2a8212e-VFS-iphonesimulator/all-product-headers.yaml
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader.xcodeproj
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader-dde5da9e6edff4e5e475d67eb2a8212e-VFS-iphonesimulator/all-product-headers.yaml
+
+CreateBuildDirectory /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader.xcodeproj
+    builtin-create-build-directory /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator
+
+CreateBuildDirectory /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader.xcodeproj
+    builtin-create-build-directory /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader_const_extract_protocols.json (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.SwiftFileList (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.SwiftFileList
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.SwiftConstValuesFileList (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.LinkFileList (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.LinkFileList
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader-OutputFileMap.json (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader_const_extract_protocols.json (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.SwiftFileList (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.SwiftFileList
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.SwiftConstValuesFileList (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.LinkFileList (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.LinkFileList
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader-OutputFileMap.json (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader.hmap (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader.hmap
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader.DependencyStaticMetadataFileList (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader.DependencyMetadataFileList (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-project-headers.hmap (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-project-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-own-target-headers.hmap (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-generated-files.hmap (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-generated-files.hmap
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-all-target-headers.hmap (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-all-non-framework-target-headers.hmap (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-DebugDylibPath-normal-x86_64.txt (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-DebugDylibPath-normal-x86_64.txt
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-DebugDylibPath-normal-arm64.txt (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-DebugDylibPath-normal-arm64.txt
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-DebugDylibInstallName-normal-x86_64.txt (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-DebugDylibInstallName-normal-x86_64.txt
+
+WriteAuxiliaryFile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-DebugDylibInstallName-normal-arm64.txt (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    write-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-DebugDylibInstallName-normal-arm64.txt
+
+MkDir /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.app (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    /bin/mkdir -p /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.app
+
+Ld /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/Binary/__preview.dylib normal arm64 (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios16.0-simulator -dynamiclib -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -O0 -L/Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator -F/Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator -install_name @rpath/ArkDownloader.debug.dylib -dead_strip -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader_dependency_info.dat -o /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/Binary/__preview.dylib
+
+Ld /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/Binary/__preview.dylib normal x86_64 (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-ios16.0-simulator -dynamiclib -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -O0 -L/Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator -F/Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator -install_name @rpath/ArkDownloader.debug.dylib -dead_strip -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader_dependency_info.dat -o /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/Binary/__preview.dylib
+
+MkDir /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_output/unthinned (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    /bin/mkdir -p /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_output/unthinned
+
+MkDir /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_output/thinned (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    /bin/mkdir -p /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_output/thinned
+
+GenerateAssetSymbols /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Assets.xcassets (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Assets.xcassets --compile /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.app --output-format human-readable-text --notices --warnings --export-dependency-info /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_dependencies --output-partial-info-plist /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_generated_info.plist --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 16.0 --platform iphonesimulator --bundle-identifier com.ark.arkdownloader --generate-swift-asset-symbol-extensions NO --generate-swift-asset-symbols /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.compilation-results */
+/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/GeneratedAssetSymbols.h
+/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/GeneratedAssetSymbols.swift
+
+
+CreateUniversalBinary /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.app/__preview.dylib normal arm64\ x86_64 (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/Binary/__preview.dylib /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/Binary/__preview.dylib -output /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.app/__preview.dylib
+
+CompileAssetCatalogVariant thinned /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.app /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Assets.xcassets (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Assets.xcassets --compile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_dependencies_thinned --output-partial-info-plist /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 16.0 --platform iphonesimulator
+/* com.apple.actool.compilation-results */
+/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_generated_info.plist_thinned
+/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_output/thinned/AppIcon60x60@2x.png
+/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_output/thinned/AppIcon76x76@2x~ipad.png
+/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_output/thinned/Assets.car
+
+
+SwiftDriver ArkDownloader normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-SwiftDriver -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name ArkDownloader -Onone -enforce-exclusivity\=checked @/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target arm64-apple-ios16.0-simulator -g -module-cache-path /Users/runner/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Index.noindex/DataStore -swift-version 5 -I /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator -F /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64 -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-generated-files.hmap -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-own-target-headers.hmap -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-project-headers.hmap -Xcc -I/Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/include -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/arm64 -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader-Swift.h -working-directory /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver ArkDownloader normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-SwiftDriver -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name ArkDownloader -Onone -enforce-exclusivity\=checked @/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target x86_64-apple-ios16.0-simulator -g -module-cache-path /Users/runner/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Index.noindex/DataStore -swift-version 5 -I /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator -F /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64 -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-generated-files.hmap -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-own-target-headers.hmap -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-project-headers.hmap -Xcc -I/Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/include -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources-normal/x86_64 -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/x86_64 -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader-Swift.h -working-directory /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS -experimental-emit-module-separately -disable-cmo
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ ArkDownloader (in target 'ArkDownloader' from project 'ArkDownloader')
+EmitSwiftModule normal arm64 (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 Compiling\ FilePublish.swift,\ ArkColors.swift,\ HomeView.swift,\ CreateTaskView.swift,\ LinkParseView.swift,\ SettingsView.swift,\ TaskCard.swift,\ GeneratedAssetSymbols.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/FilePublish.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Theme/ArkColors.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/HomeView.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/CreateTaskView.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/LinkParseView.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/SettingsView.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Components/TaskCard.swift /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/FilePublish.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Theme/ArkColors.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/HomeView.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/CreateTaskView.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+/Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/CreateTaskView.swift:31:80: error: extraneous argument label 'url:' in call
+                                        let name = UrlResolve.canonicalFileName(url: r.url, nameHint: fileName.isEmpty ? nil : fileName)
+                                                                               ^~~~~~
+                                                                                
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/LinkParseView.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/SettingsView.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Components/TaskCard.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+/Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Components/TaskCard.swift:153:35: error: missing argument label 'title:' in call
+                        PillButton("暂停", action: onPause)
+
+SwiftCompile normal arm64 /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+Failed frontend command:
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/ArkDownloaderApp.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/MainViewModel.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/TaskStatus.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/DownloadTask.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/AppSettings.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/FolderChildFile.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/AppDatabase.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/TaskEntity.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/ChunkEntity.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/ChunkDownloader.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/DownloadEngine.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/SpeedMeter.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/DownloadRepository.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Settings/SettingsRepository.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/RPC/RpcServer.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/UrlResolve.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/FormatUtil.swift -primary-file /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/FilePublish.swift -primary-file /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Theme/ArkColors.swift -primary-file /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/HomeView.swift -primary-file /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/CreateTaskView.swift -primary-file /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/LinkParseView.swift -primary-file /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/SettingsView.swift -primary-file /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Components/TaskCard.swift -primary-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/GeneratedAssetSymbols.swift -supplementary-output-file-map /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/supplementaryOutputs-3 -emit-localized-strings -emit-localized-strings-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64 -target arm64-apple-ios16.0-simulator -Xllvm -aarch64-use-tbi -enable-objc-interop -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -I /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator -F /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator -no-color-diagnostics -enable-testing -g -debug-info-format\=dwarf -dwarf-version\=4 -module-cache-path /Users/runner/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -serialize-debugging-options -const-gather-protocols-file /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader_const_extract_protocols.json -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /Users/runner/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS -resource-dir /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -enable-anonymous-context-mangled-names -file-compilation-dir /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS -Xcc -ivfsstatcache -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-generated-files.hmap -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-own-target-headers.hmap -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-project-headers.hmap -Xcc -I/Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/include -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/arm64 -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources -Xcc -DDEBUG\=1 -module-name ArkDownloader -frontend-parseable-output -disable-clang-spi -target-sdk-version 18.5 -target-sdk-name iphonesimulator18.5 -external-plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins\#/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/lib/swift/host/plugins\#/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -in-process-plugin-server-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/libSwiftInProcPluginServer.dylib -plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins -plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/lib/swift/host/plugins -o /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/FilePublish.o -o /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkColors.o -o /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/HomeView.o -o /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/CreateTaskView.o -o /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/LinkParseView.o -o /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/SettingsView.o -o /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/TaskCard.o -o /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/GeneratedAssetSymbols.o -index-unit-output-path /ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/FilePublish.o -index-unit-output-path /ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkColors.o -index-unit-output-path /ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/HomeView.o -index-unit-output-path /ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/CreateTaskView.o -index-unit-output-path /ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/LinkParseView.o -index-unit-output-path /ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/SettingsView.o -index-unit-output-path /ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/TaskCard.o -index-unit-output-path /ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/GeneratedAssetSymbols.o -index-store-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Index.noindex/DataStore -index-system-modules
+SwiftEmitModule normal x86_64 Emitting\ module\ for\ ArkDownloader (in target 'ArkDownloader' from project 'ArkDownloader')
+
+EmitSwiftModule normal x86_64 (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 Compiling\ ArkDownloaderApp.swift,\ MainViewModel.swift,\ TaskStatus.swift,\ DownloadTask.swift,\ AppSettings.swift,\ FolderChildFile.swift,\ AppDatabase.swift,\ TaskEntity.swift,\ ChunkEntity.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/ArkDownloaderApp.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/MainViewModel.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/TaskStatus.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/DownloadTask.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/AppSettings.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/FolderChildFile.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/AppDatabase.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/TaskEntity.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/ChunkEntity.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/ArkDownloaderApp.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/MainViewModel.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/TaskStatus.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/DownloadTask.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/AppSettings.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/FolderChildFile.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/AppDatabase.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/TaskEntity.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/ChunkEntity.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for ArkDownloader (in target 'ArkDownloader' from project 'ArkDownloader')
+
+SwiftDriver\ Compilation\ Requirements ArkDownloader normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name ArkDownloader -Onone -enforce-exclusivity\=checked @/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target arm64-apple-ios16.0-simulator -g -module-cache-path /Users/runner/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Index.noindex/DataStore -swift-version 5 -I /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator -F /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64 -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-generated-files.hmap -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-own-target-headers.hmap -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-project-headers.hmap -Xcc -I/Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/include -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/arm64 -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader-Swift.h -working-directory /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal x86_64 Emitting module for ArkDownloader (in target 'ArkDownloader' from project 'ArkDownloader')
+
+SwiftDriver\ Compilation\ Requirements ArkDownloader normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name ArkDownloader -Onone -enforce-exclusivity\=checked @/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target x86_64-apple-ios16.0-simulator -g -module-cache-path /Users/runner/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Index.noindex/DataStore -swift-version 5 -I /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator -F /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64 -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-generated-files.hmap -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-own-target-headers.hmap -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/ArkDownloader-project-headers.hmap -Xcc -I/Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/include -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources-normal/x86_64 -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/x86_64 -Xcc -I/Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader-Swift.h -working-directory /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS -experimental-emit-module-separately -disable-cmo
+
+LinkAssetCatalog /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Assets.xcassets (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-linkAssetCatalog --thinned /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_output/thinned --thinned-dependencies /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_generated_info.plist_thinned --unthinned /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_output/unthinned --unthinned-dependencies /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_generated_info.plist_unthinned --output /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.app --plist-output /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_generated_info.plist
+note: Emplaced /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.app/Assets.car (in target 'ArkDownloader' from project 'ArkDownloader')
+note: Emplaced /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.app/AppIcon76x76@2x~ipad.png (in target 'ArkDownloader' from project 'ArkDownloader')
+note: Emplaced /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.app/AppIcon60x60@2x.png (in target 'ArkDownloader' from project 'ArkDownloader')
+
+SwiftMergeGeneratedHeaders /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/ArkDownloader-Swift.h /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader-Swift.h /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader-Swift.h (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-swiftHeaderTool -arch arm64 /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader-Swift.h -arch x86_64 /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader-Swift.h -o /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/ArkDownloader-Swift.h
+
+Copy /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/x86_64-apple-ios-simulator.swiftmodule /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.swiftmodule (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.swiftmodule /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/x86_64-apple-ios-simulator.swiftmodule
+
+Copy /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/x86_64-apple-ios-simulator.swiftdoc /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.swiftdoc (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.swiftdoc /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/x86_64-apple-ios-simulator.swiftdoc
+
+Copy /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/x86_64-apple-ios-simulator.abi.json /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.abi.json (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.abi.json /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/x86_64-apple-ios-simulator.abi.json
+
+Copy /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.swiftmodule (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.swiftmodule /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/arm64-apple-ios-simulator.swiftdoc /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.swiftdoc (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.swiftdoc /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.abi.json (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.abi.json /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.swiftsourceinfo (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/x86_64/ArkDownloader.swiftsourceinfo /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo
+
+Copy /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.swiftsourceinfo (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/Objects-normal/arm64/ArkDownloader.swiftsourceinfo /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+ProcessInfoPlistFile /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.app/Info.plist /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Info.plist (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    builtin-infoPlistUtility /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/assetcatalog_generated_info.plist -o /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/build/Debug-iphonesimulator/ArkDownloader.app/Info.plist
+
+SwiftCompile normal arm64 Compiling\ ChunkDownloader.swift,\ DownloadEngine.swift,\ SpeedMeter.swift,\ DownloadRepository.swift,\ SettingsRepository.swift,\ RpcServer.swift,\ UrlResolve.swift,\ FormatUtil.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/ChunkDownloader.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/DownloadEngine.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/SpeedMeter.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/DownloadRepository.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Settings/SettingsRepository.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/RPC/RpcServer.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/UrlResolve.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/FormatUtil.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/ChunkDownloader.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/DownloadEngine.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+/Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/DownloadEngine.swift:502:11: warning: 'catch' block is unreachable because no errors are thrown in 'do' block
+        } catch {
+          ^
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/SpeedMeter.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/DownloadRepository.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Settings/SettingsRepository.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/RPC/RpcServer.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/UrlResolve.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/FormatUtil.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 Compiling\ ChunkDownloader.swift,\ DownloadEngine.swift,\ SpeedMeter.swift,\ DownloadRepository.swift,\ SettingsRepository.swift,\ RpcServer.swift,\ UrlResolve.swift,\ FormatUtil.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/ChunkDownloader.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/DownloadEngine.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/SpeedMeter.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/DownloadRepository.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Settings/SettingsRepository.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/RPC/RpcServer.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/UrlResolve.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/FormatUtil.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/ChunkDownloader.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/DownloadEngine.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+/Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/DownloadEngine.swift:502:11: warning: 'catch' block is unreachable because no errors are thrown in 'do' block
+        } catch {
+          ^
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/SpeedMeter.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Download/DownloadRepository.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Settings/SettingsRepository.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/RPC/RpcServer.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/UrlResolve.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/FormatUtil.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling ArkDownloaderApp.swift, MainViewModel.swift, TaskStatus.swift, DownloadTask.swift, AppSettings.swift, FolderChildFile.swift, AppDatabase.swift, TaskEntity.swift, ChunkEntity.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+
+SwiftCompile normal x86_64 Compiling\ FilePublish.swift,\ ArkColors.swift,\ HomeView.swift,\ CreateTaskView.swift,\ LinkParseView.swift,\ SettingsView.swift,\ TaskCard.swift,\ GeneratedAssetSymbols.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/FilePublish.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Theme/ArkColors.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/HomeView.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/CreateTaskView.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/LinkParseView.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/SettingsView.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Components/TaskCard.swift /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/FilePublish.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Theme/ArkColors.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/HomeView.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/CreateTaskView.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/LinkParseView.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/SettingsView.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Components/TaskCard.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling ChunkDownloader.swift, DownloadEngine.swift, SpeedMeter.swift, DownloadRepository.swift, SettingsRepository.swift, RpcServer.swift, UrlResolve.swift, FormatUtil.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+
+SwiftCompile normal x86_64 Compiling\ ArkDownloaderApp.swift,\ MainViewModel.swift,\ TaskStatus.swift,\ DownloadTask.swift,\ AppSettings.swift,\ FolderChildFile.swift,\ AppDatabase.swift,\ TaskEntity.swift,\ ChunkEntity.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/ArkDownloaderApp.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/MainViewModel.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/TaskStatus.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/DownloadTask.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/AppSettings.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/FolderChildFile.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/AppDatabase.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/TaskEntity.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/ChunkEntity.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/ArkDownloaderApp.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/MainViewModel.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/TaskStatus.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/DownloadTask.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/AppSettings.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Models/FolderChildFile.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/AppDatabase.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/TaskEntity.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftCompile normal x86_64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Database/ChunkEntity.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+    cd /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS
+    
+
+SwiftDriverJobDiscovery normal x86_64 Compiling ChunkDownloader.swift, DownloadEngine.swift, SpeedMeter.swift, DownloadRepository.swift, SettingsRepository.swift, RpcServer.swift, UrlResolve.swift, FormatUtil.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/CreateTaskView.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+	SwiftCompile normal arm64 /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Components/TaskCard.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+	SwiftCompile normal arm64 Compiling\ FilePublish.swift,\ ArkColors.swift,\ HomeView.swift,\ CreateTaskView.swift,\ LinkParseView.swift,\ SettingsView.swift,\ TaskCard.swift,\ GeneratedAssetSymbols.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/Util/FilePublish.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Theme/ArkColors.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/HomeView.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/CreateTaskView.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/LinkParseView.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Screens/SettingsView.swift /Users/runner/work/ArkDownloader-IOS/ArkDownloader-IOS/ArkDownloader/UI/Components/TaskCard.swift /Users/runner/Library/Developer/Xcode/DerivedData/ArkDownloader-bljezssltqqxmhbbudbjgelhqual/Build/Intermediates.noindex/ArkDownloader.build/Debug-iphonesimulator/ArkDownloader.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'ArkDownloader' from project 'ArkDownloader')
+	Building project ArkDownloader with scheme ArkDownloader and configuration Debug
+(4 failures)
