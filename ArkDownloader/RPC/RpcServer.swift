@@ -79,17 +79,21 @@ final class RpcServer {
         return address
     }
 
-    private func handleConnection(_ connection: NWConnection) {
-        connection.start(queue: queue)
-        var buffer = Data()
-        receiveLoop(connection, buffer: &buffer)
+    private final class ConnectionBuffer {
+        var data = Data()
     }
 
-    private func receiveLoop(_ connection: NWConnection, buffer: inout Data) {
+    private func handleConnection(_ connection: NWConnection) {
+        connection.start(queue: queue)
+        let buffer = ConnectionBuffer()
+        receiveLoop(connection, buffer: buffer)
+    }
+
+    private func receiveLoop(_ connection: NWConnection, buffer: ConnectionBuffer) {
         connection.receive(minimumIncompleteLength: 1, maximumLength: 65536) { [weak self] data, _, isComplete, error in
             guard let self = self else { return }
             if let data = data {
-                buffer.append(data)
+                buffer.data.append(data)
             }
             if let error = error {
                 if case .posix(let code) = error, code == .ECONNRESET {
@@ -98,7 +102,7 @@ final class RpcServer {
                 }
             }
             // Try to parse a complete HTTP request
-            if let request = self.parseRequest(buffer) {
+            if let request = self.parseRequest(buffer.data) {
                 self.dispatchRequest(connection, request: request)
                 return
             }
@@ -106,7 +110,7 @@ final class RpcServer {
                 connection.cancel()
                 return
             }
-            self.receiveLoop(connection, buffer: &buffer)
+            self.receiveLoop(connection, buffer: buffer)
         }
     }
 
