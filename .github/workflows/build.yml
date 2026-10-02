@@ -12,6 +12,8 @@ jobs:
     name: Build & Archive
     runs-on: macos-15
     timeout-minutes: 30
+    permissions:
+      contents: write
 
     # Map secrets to env vars so they can be used in `if:` conditions.
     env:
@@ -50,8 +52,10 @@ jobs:
       - name: Build for Simulator
         run: |
           set -uo pipefail
+          set +e
           mkdir -p build/ci-logs
           LOG=build/ci-logs/xcodebuild-simulator.log
+          xcodebuild -version || true
           xcodebuild build \
             -project ArkDownloader.xcodeproj \
             -scheme ArkDownloader \
@@ -71,10 +75,34 @@ jobs:
             sed -n "/The following build commands failed:/,/^[[:space:]]*$/p" "$LOG" | head -40 || true
             echo "=================== LAST 40 LINES ====================="
             tail -n 40 "$LOG" || true
-            echo "=================== ANNOTATIONS ======================="
-            grep -E "error:|fatal error:" "$LOG" | head -10 | while IFS= read -r line; do
-              echo "::error::$line"
-            done
+            {
+              echo "## Build for Simulator failed (exit $status)"
+              echo ""
+              echo "### error lines"
+              echo '```'
+              grep -E "error:|fatal error:" "$LOG" | head -30 || true
+              echo '```'
+              echo "### failed build commands"
+              echo '```'
+              sed -n "/The following build commands failed:/,/^[[:space:]]*$/p" "$LOG" | head -40 || true
+              echo '```'
+              echo "### last 60 lines of raw log"
+              echo '```'
+              tail -n 60 "$LOG" || true
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "::error::BUILD FAILED with exit code $status"
+            grep -E "error:|fatal error:" "$LOG" | head -4 | while IFS= read -r line; do
+              echo "::error::error-line: $line"
+            done || true
+            tail -n 4 "$LOG" | while IFS= read -r line; do
+              echo "::error::tail: $line"
+            done || true
+            git config user.email "ci-bot@users.noreply.github.com"
+            git config user.name "CI Bot"
+            git add -f build/ci-logs/*.log || true
+            git commit -m "ci: raw build log for run ${GITHUB_RUN_ID}" || true
+            git push -f origin HEAD:refs/heads/ci-logs || echo "WARN: could not push raw log branch"
             exit "$status"
           fi
 
@@ -94,6 +122,7 @@ jobs:
       - name: Build for Device (unsigned)
         run: |
           set -uo pipefail
+          set +e
           mkdir -p build/ci-logs
           LOG=build/ci-logs/xcodebuild-device.log
           xcodebuild build \
@@ -116,10 +145,34 @@ jobs:
             sed -n "/The following build commands failed:/,/^[[:space:]]*$/p" "$LOG" | head -40 || true
             echo "=================== LAST 40 LINES ====================="
             tail -n 40 "$LOG" || true
-            echo "=================== ANNOTATIONS ======================="
-            grep -E "error:|fatal error:" "$LOG" | head -10 | while IFS= read -r line; do
-              echo "::error::$line"
-            done
+            {
+              echo "## Build for Device failed (exit $status)"
+              echo ""
+              echo "### error lines"
+              echo '```'
+              grep -E "error:|fatal error:" "$LOG" | head -30 || true
+              echo '```'
+              echo "### failed build commands"
+              echo '```'
+              sed -n "/The following build commands failed:/,/^[[:space:]]*$/p" "$LOG" | head -40 || true
+              echo '```'
+              echo "### last 60 lines of raw log"
+              echo '```'
+              tail -n 60 "$LOG" || true
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "::error::BUILD FAILED with exit code $status"
+            grep -E "error:|fatal error:" "$LOG" | head -4 | while IFS= read -r line; do
+              echo "::error::error-line: $line"
+            done || true
+            tail -n 4 "$LOG" | while IFS= read -r line; do
+              echo "::error::tail: $line"
+            done || true
+            git config user.email "ci-bot@users.noreply.github.com"
+            git config user.name "CI Bot"
+            git add -f build/ci-logs/*.log || true
+            git commit -m "ci: raw build log for run ${GITHUB_RUN_ID}" || true
+            git push -f origin HEAD:refs/heads/ci-logs || echo "WARN: could not push raw log branch"
             exit "$status"
           fi
 
