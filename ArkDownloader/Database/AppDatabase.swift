@@ -5,14 +5,14 @@ import SQLite3
 actor AppDatabase {
     static let shared = AppDatabase()
 
-    private var db: OpaquePointer?
+    nonisolated(unsafe) private var db: OpaquePointer?
 
     private init() {
         open()
         createTables()
     }
 
-    private func open() {
+    nonisolated private func open() {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let docs = paths[0]
         let dbURL = docs.appendingPathComponent("ark_downloader.sqlite")
@@ -21,7 +21,7 @@ actor AppDatabase {
         }
     }
 
-    private func createTables() {
+    nonisolated private func createTables() {
         let tasksSQL = """
         CREATE TABLE IF NOT EXISTS tasks (
             id TEXT PRIMARY KEY,
@@ -66,7 +66,7 @@ actor AppDatabase {
     }
 
     @discardableResult
-    private func exec(_ sql: String) -> Bool {
+    nonisolated private func exec(_ sql: String) -> Bool {
         var errMsg: UnsafeMutablePointer<Int8>?
         if sqlite3_exec(db, sql, nil, nil, &errMsg) != SQLITE_OK {
             if let msg = errMsg {
@@ -251,3 +251,4 @@ extension String {
         replacingOccurrences(of: "'", with: "''")
     }
 }
+
