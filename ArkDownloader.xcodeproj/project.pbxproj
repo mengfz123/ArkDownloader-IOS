@@ -37,7 +37,7 @@
 /* Begin PBXContainerItemProxy section */
 		0300000000000000000001 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0400000000000000000001 /* Project object */;
+			containerPortal = 0400000000000000000002 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0500000000000000000001;
 			remoteInfo = ArkDownloader;
@@ -237,7 +237,7 @@
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0400000000000000000001 /* Project object */ = {
+		0400000000000000000002 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
@@ -445,5 +445,7 @@
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0400000000000000000001 /* Project object */;
+	rootObject = 0400000000000000000002 /* Project object */;
 }
+
+
