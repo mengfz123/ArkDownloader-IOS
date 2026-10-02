@@ -26,19 +26,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Select Xcode
+      - name: Use default Xcode
         run: |
           set -euo pipefail
-          if [ -d /Applications/Xcode_16.app ]; then
-            sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
-          elif [ -d /Applications/Xcode_16.1.app ]; then
-            sudo xcode-select -s /Applications/Xcode_16.1.app/Contents/Developer
-          else
-            echo "Available Xcode versions:"
-            ls /Applications/ | grep Xcode || true
-            exit 1
-          fi
+          echo "Active developer dir: $(xcode-select -p)"
           xcodebuild -version
+          echo ""
+          echo "Installed Xcodes:"
+          ls /Applications/ | grep -i xcode || true
+          echo ""
+          echo "Installed simulator runtimes:"
+          xcrun simctl list runtimes || true
 
       - name: Show available SDKs
         run: xcodebuild -showsdks
