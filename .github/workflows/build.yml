@@ -39,11 +39,12 @@ jobs:
           xcodebuild build \
             -project ArkDownloader.xcodeproj \
             -scheme ArkDownloader \
-            -destination 'platform=iOS Simulator,name=iPhone 15' \
+            -sdk iphonesimulator \
             -configuration Debug \
+            SYMROOT=build \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
-            ONLY_ACTIVE_ARCH=YES \
+            ONLY_ACTIVE_ARCH=NO \
             | xcpretty
 
       - name: Upload simulator .app
@@ -67,6 +68,7 @@ jobs:
             -scheme ArkDownloader \
             -configuration Release \
             -sdk iphoneos \
+            SYMROOT=build \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
@@ -143,3 +145,6 @@ jobs:
         with:
           name: ArkDownloader-signed-ipa
           path: build/signed/*.ipa
+
+
+
